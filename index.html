@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kafe Oksigen Cirebon - Tempat Ngopi Asri & Sejuk</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header & Navigasi -->
+  <header class="header">
+    <div class="container navbar">
+      <div class="logo">
+        <span class="logo-emoji">🌿</span>
+        <div>
+          <h1>Kafe Oksigen</h1>
+          <small>Cirebon, Jawa Barat</small>
+        </div>
+      </div>
+      <nav class="nav-menu">
+        <a href="#tentang">Tentang</a>
+        <a href="#menu">Daftar Menu</a>
+        <a href="#lokasi">Lokasi & Jam</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h2>Ruang Teduh & Kopi Segar di Kota Cirebon</h2>
+      <p>Lepas penat di tengah sejuknya tanaman hijau. Nikmati racikan kopi lokal, minuman segar, dan camilan khas Cirebon dengan harga bersahabat.</p>
+      <a href="#menu" class="btn-hero">Lihat Menu & Harga</a>
+    </div>
+  </section>
+
+  <!-- Tentang Singkat -->
+  <section class="section tentang" id="tentang">
+    <div class="container">
+      <div class="tentang-box">
+        <h3>Kenapa Namanya Kafe Oksigen?</h3>
+        <p>
+          Berlokasi di Cirebon yang terkenal hangat, Kafe Oksigen hadir dengan konsep <em>open-space green cafe</em> yang dipenuhi pepohonan rindang dan sirkulasi udara alami yang melimpah. Cocok untuk nugas, kerja santai (WFC), maupun nongkrong bersama teman sampai malam.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Area Menu & 3 Filter Interaktif -->
+  <section class="section menu-section" id="menu">
+    <div class="container">
+      <div class="section-title">
+        <h2>Katalog Menu Kafe Oksigen</h2>
+      </div>
+
+      <!-- KOTAK 3 FILTER INTERAKTIF JS -->
+      <div class="filter-wrapper">
+        <div class="filter-header-top">
+          <h4>Filter Pencarian Menu</h4>
+          <button type="button" id="btnResetFilter" class="btn-reset">Reset Filter</button>
+        </div>
+
+        <div class="filter-grid">
+          
+          <!-- FILTER 1: Pencarian Kata Kunci (Input Teks) -->
+          <div class="filter-card">
+            <label for="inputCari" class="label-filter">
+              <strong>1. Cari Nama Menu:</strong>
+            </label>
+            <input 
+              type="text" 
+              id="inputCari" 
+              placeholder="Contoh: Kopi Susu, Cireng, Mie..." 
+              autocomplete="off"
+            >
+          </div>
+
+          <!-- FILTER 2: Kategori Menu (Tombol Kategori) -->
+          <div class="filter-card">
+            <span class="label-filter"><strong>2. Pilih Kategori:</strong></span>
+            <div class="kategori-buttons" id="kategoriContainer">
+              <button type="button" class="btn-kat active" data-kat="all">Semua</button>
+              <button type="button" class="btn-kat" data-kat="kopi">Kopi</button>
+              <button type="button" class="btn-kat" data-kat="non-kopi">Non-Kopi</button>
+              <button type="button" class="btn-kat" data-kat="camilan">Camilan</button>
+              <button type="button" class="btn-kat" data-kat="makanan">Makanan</button>
+            </div>
+          </div>
+
+          <!-- FILTER 3: Batas Harga Maksimal (Range Slider) -->
+          <div class="filter-card">
+            <div class="slider-info">
+              <label for="sliderHarga" class="label-filter">
+                <strong>3. Maksimal Harga:</strong>
+              </label>
+              <span id="labelHarga" class="badge-harga">Rp 30.000</span>
+            </div>
+            <input 
+              type="range" 
+              id="sliderHarga" 
+              min="10000" 
+              max="30000" 
+              step="1000" 
+              value="30000"
+            >
+            <div class="slider-rentang">
+              <span>Rp 10.000</span>
+              <span>Rp 30.000</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Indikator Jumlah Hasil -->
+        <div class="hasil-info">
+          <span id="teksJumlahMenu">Menampilkan 12 menu</span>
+        </div>
+      </div>
+
+      <!-- GRID DAFTAR MENU -->
+      <div class="menu-grid" id="menuGrid">
+        <!-- Item menu di-render via script.js -->
+      </div>
+
+      <!-- Pesan jika tidak ada menu yang cocok -->
+      <div id="pesanKosong" class="pesan-kosong" style="display: none;">
+        <p>Menu yang kamu cari tidak ditemukan dengan filter saat ini.</p>
+        <button type="button" id="btnResetKosong" class="btn-reset-alt">Tampilkan Semua Menu</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Lokasi & Kontak -->
+  <section class="section lokasi-section" id="lokasi">
+    <div class="container">
+      <div class="lokasi-card">
+        <h3>Kunjungi Kafe Oksigen Cirebon</h3>
+        <div class="lokasi-grid">
+          <div>
+            <p><strong>📍 Alamat:</strong><br>Jl. Wahidin Sudirohusodo No. 45, Kejaksan, Kota Cirebon, Jawa Barat 45122</p>
+            <p><strong>⏰ Jam Operasional:</strong><br>Setiap Hari: 10.00 - 23.00 WIB</p>
+          </div>
+          <div>
+            <p><strong>📶 Fasilitas:</strong><br>Wi-Fi Cepat, Stopkontak di Tiap Meja, Area Non-Smoking Ber-AC & Area Outdoor Asri.</p>
+            <p><strong>📱 WhatsApp:</strong><br>+62 812-3456-7890 (Reservasi Meja / Event)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Sederhana -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p><strong>&copy; 2026 Kafe Oksigen Cirebon.</strong></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

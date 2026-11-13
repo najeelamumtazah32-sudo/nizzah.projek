@@ -1,0 +1,508 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #faf7f2; /* Warna dasar krem hangat ala kafe */
+  color: #332d29;
+  line-height: 1.6;
+}
+
+/* Kontainer Tengah */
+.container {
+  width: 90%;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   Header & Navigasi
+   ========================================================= */
+.header {
+  background-color: #275635; /* Hijau daun teduh */
+  color: #ffffff;
+  padding: 14px 0;
+  border-bottom: 3px solid #1c3e26;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-emoji {
+  font-size: 28px;
+}
+
+.logo h1 {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.logo small {
+  font-size: 12px;
+  color: #c9e2cf;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-menu a {
+  color: #f1f8f3;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.nav-menu a:hover {
+  background-color: #1e452a;
+}
+
+/* =========================================================
+   Hero Banner
+   ========================================================= */
+.hero {
+  background-color: #e9f0e8;
+  border-bottom: 1px solid #d4ded3;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.hero-content h2 {
+  font-size: 26px;
+  color: #20472c;
+  margin-bottom: 12px;
+}
+
+.hero-content p {
+  max-width: 650px;
+  margin: 0 auto 20px;
+  color: #555;
+  font-size: 15px;
+}
+
+.btn-hero {
+  display: inline-block;
+  background-color: #275635;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+
+.btn-hero:hover {
+  background-color: #1a3a23;
+}
+
+/* =========================================================
+   Tentang Kafe
+   ========================================================= */
+.section {
+  padding: 35px 0;
+}
+
+.tentang-box {
+  background-color: #ffffff;
+  border: 1px solid #e5ded5;
+  border-left: 5px solid #275635;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.tentang-box h3 {
+  color: #275635;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.tentang-box p {
+  color: #4b443e;
+  font-size: 14px;
+}
+
+/* =========================================================
+   Menu & Filter Section
+   ========================================================= */
+.section-title {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.section-title h2 {
+  font-size: 24px;
+  color: #2c2520;
+}
+
+.section-title p {
+  color: #666;
+  font-size: 14px;
+}
+
+/* Kotak 3 Filter */
+.filter-wrapper {
+  background-color: #ffffff;
+  border: 1px solid #dfd8cf;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.filter-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.filter-header-top h4 {
+  color: #275635;
+  font-size: 16px;
+}
+
+.btn-reset {
+  background-color: #f0ebe4;
+  border: 1px solid #d3c9bd;
+  color: #443c36;
+  padding: 5px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn-reset:hover {
+  background-color: #e2dad0;
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 1fr;
+  gap: 15px;
+}
+
+.filter-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.label-filter {
+  font-size: 13px;
+  color: #3e3732;
+  margin-bottom: 6px;
+}
+
+/* FILTER 1: Input Cari */
+#inputCari {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 13px;
+  outline: none;
+}
+
+#inputCari:focus {
+  border-color: #275635;
+}
+
+/* FILTER 2: Tombol Kategori */
+.kategori-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.btn-kat {
+  background-color: #f3ede6;
+  border: 1px solid #dcd4ca;
+  color: #443c36;
+  padding: 6px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.15s;
+}
+
+.btn-kat:hover {
+  background-color: #e5ded4;
+}
+
+.btn-kat.active {
+  background-color: #275635;
+  color: #ffffff;
+  border-color: black;
+  font-weight: bold;
+}
+
+/* FILTER 3: Slider Harga */
+.slider-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.badge-harga {
+  background-color: #e9f3ec;
+  color: #275635;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 2px 7px;
+  border-radius: 3px;
+  border: 1px solid #c9e0cf;
+}
+
+#sliderHarga {
+  width: 100%;
+  cursor: pointer;
+  accent-color: #275635;
+}
+
+.slider-rentang {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #888;
+  margin-top: 3px;
+}
+
+/* Indikator Hasil */
+.hasil-info {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+  font-size: 13px;
+  color: #666;
+}
+
+/* =========================================================
+   Grid Menu Kafe
+   ========================================================= */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.menu-item {
+  background-color: #ffffff;
+  border: 1px solid #e7e0d6;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item:hover {
+  border-color: #c9c0b5;
+}
+
+.menu-img-wrap {
+  width: 100%;
+  height: 160px;
+  background-color: #eae5de;
+  overflow: hidden;
+  position: relative;
+}
+
+.menu-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menu-kat-tag {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background-color: rgba(39, 86, 53, 0.9);
+  color: #fff;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 3px;
+  text-transform: capitalize;
+}
+
+.menu-body {
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.menu-body h4 {
+  font-size: 16px;
+  color: #2c2520;
+  margin-bottom: 5px;
+}
+
+.menu-deskripsi {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 10px;
+  flex-grow: 1;
+}
+
+.menu-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 8px;
+  border-top: 1px dashed #eee;
+}
+
+.menu-harga {
+  font-size: 15px;
+  font-weight: bold;
+  color: #275635;
+}
+
+.menu-status {
+  font-size: 11px;
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+/* Pesan Kosong */
+.pesan-kosong {
+  text-align: center;
+  background-color: #fff;
+  border: 1px dashed #d5ccc0;
+  padding: 30px 15px;
+  border-radius: 6px;
+  color: #666;
+  font-size: 14px;
+}
+
+.btn-reset-alt {
+  margin-top: 10px;
+  background-color: #275635;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.btn-reset-alt:hover {
+  background-color: #1a3a23;
+}
+
+/* =========================================================
+   Lokasi & Footer
+   ========================================================= */
+.lokasi-card {
+  background-color: #ffffff;
+  border: 1px solid #e5ded5;
+  padding: 22px;
+  border-radius: 6px;
+}
+
+.lokasi-card h3 {
+  color: #275635;
+  margin-bottom: 15px;
+  font-size: 18px;
+  border-bottom: 2px solid #e9f0e8;
+  padding-bottom: 6px;
+}
+
+.lokasi-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.lokasi-grid p {
+  margin-bottom: 10px;
+}
+
+.footer {
+  background-color: #20472c;
+  color: #d1e5d7;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+/* =========================================================
+   RESPONSIF (Media Queries)
+   Wajib rapi di HP, Tablet, dan Laptop
+   ========================================================= */
+
+/* Tablet & Layar Sedang (< 880px) */
+@media (max-width: 880px) {
+  .filter-grid {
+    grid-template-columns: 1fr; /* Filter tersusun ke bawah */
+    gap: 15px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom di tablet */
+    gap: 15px;
+  }
+
+  .lokasi-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Ponsel / Layar Kecil (< 580px) */
+@media (max-width: 580px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-menu {
+    width: 100%;
+    justify-content: flex-start;
+    padding-top: 6px;
+  }
+
+  .hero-content h2 {
+    font-size: 20px;
+  }
+
+  .hero-content p {
+    font-size: 13px;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr; /* 1 kolom penuh di layar HP */
+  }
+
+  .kategori-buttons {
+    gap: 4px;
+  }
+
+  .btn-kat {
+    font-size: 11px;
+    padding: 5px 8px;
+  }
+}
+
